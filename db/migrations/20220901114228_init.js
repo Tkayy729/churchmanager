@@ -7,7 +7,7 @@ exports.up = function (knex) {
       table.string("otherNames");
       table.string("email").unique();
       table.string("contact");
-      table.string("dateOfBirth").notNullable();
+      table.date("dateOfBirth").notNullable();
       table.boolean("status");
       table.string("hometown");
       table.string("regionOfHometown");
@@ -29,7 +29,7 @@ exports.up = function (knex) {
         .notNullable()
         .references("id")
         .inTable("members");
-     table.timestamps(true, true);
+      table.timestamps(true, true);
     });
 };
 
