@@ -31,6 +31,7 @@ exports.up = function (knex) {
         .inTable("members");
       table.timestamps(true, true);
     });
+
 };
 
 exports.down = function (knex) {
